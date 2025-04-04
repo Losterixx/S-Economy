@@ -1,0 +1,43 @@
+# This plugin utilizes MiniMessage for messages.
+# For more information, visit https://docs.adventure.kyori.net/minimessage.html
+
+file-version: 1
+
+# The prefix before every message
+prefix: "<#ECC868><b>S-Economy</b> <dark_gray>⚡ <gray>"
+
+# The messages file to use
+langFile: 'english'
+
+# Settings for the update checker
+updateChecker:
+  # Send a message to the console when a new version is available
+  consoleMessage: true
+  # Send a message to the player when a new version is available
+  # This requires the permission 'sEconomy.admin' or to be an OP
+  playerMessage: true
+
+# All settings about economy
+economy:
+  # The name of the economy
+  economyName:
+    singular: "Coin"
+    plural: "Coins"
+  # The starting balance of new players
+  startingBalance: 5000.0
+  # The currency symbol
+  currencySymbol: "$"
+  # The format of the balance
+  format: "%currencySymbol%%amount%"
+  # Displayed decimals
+  fractionalDigits: 2
+  # The format of the balances
+  decimalFormat:
+    # Here you can define the format of the balance
+    format: "#,###.##"
+    # Here you can define the decimal separator
+    # Samples:
+    # 'ENGLISH' -> '1,000.00'
+    # 'GERMAN'  -> '1.000,00'
+    # 'FRENCH'  -> '1 000,00'
+    locale: 'ENGLISH'

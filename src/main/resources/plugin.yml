@@ -1,0 +1,11 @@
+name: S-Economy
+version: '1.0'
+main: dev.losterixx.sEconomy.Main
+api-version: '1.21'
+authors: [ Losterixx ]
+description: Just a simple and lightweight economy system.
+load: STARTUP
+depend:
+  - Vault
+softdepend:
+  - S-Core

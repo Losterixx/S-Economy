@@ -1,0 +1,44 @@
+# IntelliJ IDEA
+.idea
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+gen/
+logs/
+
+# Gradle
+.gradle
+.gradle/
+gradle
+gradle/
+build
+build/
+gradlew
+gradlew.bat
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Linux
+*~
+
+# Others
+*.log
+*.swp
+*.swo
+
+# Custom
+libs
+libs/

@@ -1,0 +1,29 @@
+# This plugin utilizes MiniMessage for messages.
+# For more information, visit https://docs.adventure.kyori.net/minimessage.html
+
+file-version: 1
+
+# Generelle Nachrichten
+general:
+  noPlayer: "<gray>Dies können <red>nur Spieler<gray> ausführen!"
+  noPerms: "<gray>Du hast <red>keine Berechtigung<gray> für diesen Befehl!"
+  playerNotFound: "<gray>Der angegebene Spieler <red>konnte nicht gefunden<gray> werden!"
+
+# Other messages
+other:
+  updateChecker: "<gray>Es ist ein <yellow>Update verfügbar<gray>! Die momentane Version ist die <red>v%current-version%<gray>, die neuste Version ist die <green>%latest-version%<gray>!"
+
+# Befehlsnachrichten
+commands:
+  # Nachrichten für den /s-economy Befehl (Hauptbefehl des Plugins)
+  s-economy:
+    usage: "<gray>Bitte nutze <red>/s-economy <about/reload><gray>!"
+    about: "<gray>S-Economy v%version% <dark_gray>- <gray>%author%"
+    reload:
+      reloading: "<gray>S-Economy <yellow>wird neugeladen<gray>..."
+      reloaded: "<gray>S-Economy wurde <green>erfolgreich neugeladen<gray>! <dark_gray>(%time%ms)"
+      error: "<red>Fehler beim Neuladen <gray>von S-Economy! Überprüfe die Konsole für Details."
+  balance:
+    usage: "<gray>Bitte nutze <red>/balance <Spieler><gray>!"
+    self: "<gray>Dein Kontostand beträgt <yellow>%balance%<gray>!"
+    other: "<gray>Der Kontostand von <white>%player% <gray>beträgt <yellow>%balance%<gray>!"
