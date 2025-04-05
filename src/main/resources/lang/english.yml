@@ -27,3 +27,21 @@ commands:
     usage: "<gray>Please use <red>/balance <player><gray>!"
     self: "<gray>Your balance is <yellow>%balance%<gray>!"
     other: "<gray>The balance of <white>%player% <gray>is <yellow>%balance%<gray>!"
+  economy:
+    usage: "<gray>Please use <red>/economy <give/take/set/reset/check> <player> <?amount><gray>!"
+    noAmount: "<gray>The given amount is <red>invalid<gray>!"
+    give:
+      usage: "<gray>Please use <red>/economy give <player> <amount><gray>!"
+      success: "<gray>You have given <white>%player% <yellow>%balance%<gray>!"
+    take:
+      usage: "<gray>Please use <red>/economy take <player> <amount><gray>!"
+      success: "<gray>You have taken <white>%player% <yellow>%balance%<gray>!"
+    set:
+      usage: "<gray>Please use <red>/economy set <player> <amount><gray>!"
+      success: "<gray>You have set the balance of <white>%player% <gray>to <yellow>%balance%<gray>!"
+    reset:
+      usage: "<gray>Please use <red>/economy reset <player><gray>!"
+      success: "<gray>You have reset the balance of <white>%player%<gray>!"
+    check:
+      usage: "<gray>Please use <red>/economy check <player><gray>!"
+      success: "<gray>The balance of <white>%player% <gray>is <yellow>%balance%<gray>!"

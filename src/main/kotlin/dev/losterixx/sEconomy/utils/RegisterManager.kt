@@ -19,6 +19,7 @@ object RegisterManager {
     private fun registerCommands() {
         registerCommand("sEconomy", SEconomyCommand(), SEconomyCommand(), "seco", "s-eco")
         registerCommand("balance", BalanceCommand(), BalanceCommand(), "bal", "money", "coins")
+        registerCommand("economy", EconomyCommand(), EconomyCommand(), "econ", "eco")
 
         main.logger.info("Registered $commands commands!")
     }

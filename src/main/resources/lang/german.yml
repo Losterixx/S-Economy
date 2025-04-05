@@ -27,3 +27,21 @@ commands:
     usage: "<gray>Bitte nutze <red>/balance <Spieler><gray>!"
     self: "<gray>Dein Kontostand beträgt <yellow>%balance%<gray>!"
     other: "<gray>Der Kontostand von <white>%player% <gray>beträgt <yellow>%balance%<gray>!"
+  economy:
+    usage: "<gray>Bitte nutze <red>/economy <give/take/set/reset/check> <Spieler> <?Betrag><gray>!"
+    noAmount: "<gray>Der angegebene Betrag ist <red>ungültig<gray>!"
+    give:
+      usage: "<gray>Bitte nutze <red>/economy give <Spieler> <Betrag><gray>!"
+      success: "<gray>Du hast <white>%player% <yellow>%balance%<gray> gegeben!"
+    take:
+      usage: "<gray>Bitte nutze <red>/economy take <Spieler> <Betrag><gray>!"
+      success: "<gray>Du hast <white>%player% <yellow>%balance%<gray> abgezogen!"
+    set:
+      usage: "<gray>Bitte nutze <red>/economy set <Spieler> <Betrag><gray>!"
+      success: "<gray>Du hast den Kontostand von <white>%player% <gray>auf <yellow>%balance%<gray> gesetzt!"
+    reset:
+      usage: "<gray>Bitte nutze <red>/economy reset <Spieler><gray>!"
+      success: "<gray>Du hast den Kontostand von <white>%player%<gray> zurückgesetzt!"
+    check:
+      usage: "<gray>Bitte nutze <red>/economy check <Spieler><gray>!"
+      success: "<gray>Der Kontostand von <white>%player% <gray>beträgt <yellow>%balance%<gray>!"
