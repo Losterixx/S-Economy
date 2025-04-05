@@ -12,15 +12,16 @@ import org.bukkit.event.Listener
 object RegisterManager {
 
     private val main = Main.instance
+    private fun getCommands() = ConfigManager.getConfig("commands")
 
     private var commands = 0
     private var listeners = 0
 
     private fun registerCommands() {
         registerCommand("sEconomy", SEconomyCommand(), SEconomyCommand(), "seco", "s-eco")
-        registerCommand("balance", BalanceCommand(), BalanceCommand(), "bal", "money", "coins")
-        registerCommand("economy", EconomyCommand(), EconomyCommand(), "econ", "eco")
-        registerCommand("pay", PayCommand(), PayCommand())
+        if (getCommands().getBoolean("balance.enabled")) registerCommand("balance", BalanceCommand(), BalanceCommand(), *getCommands().getStringList("balance.aliases").toTypedArray())
+        if (getCommands().getBoolean("economy.enabled")) registerCommand("economy", EconomyCommand(), EconomyCommand(), *getCommands().getStringList("economy.aliases").toTypedArray())
+        if (getCommands().getBoolean("pay.enabled")) registerCommand("pay", PayCommand(), PayCommand(), *getCommands().getStringList("pay.aliases").toTypedArray())
 
         main.logger.info("Registered $commands commands!")
     }

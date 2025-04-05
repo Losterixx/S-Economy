@@ -26,8 +26,7 @@ class Main : JavaPlugin() {
 
     lateinit var economyManager: EconomyManager
         private set
-    lateinit var vaultHook: VaultHook
-        private set
+    private lateinit var vaultHook: VaultHook
 
     override fun onEnable() {
 
@@ -92,6 +91,7 @@ class Main : JavaPlugin() {
 
     fun loadConfigFiles() {
         ConfigManager.createConfig("config", "config.yml")
+        ConfigManager.createConfig("commands", "commands.yml")
         ConfigManager.createConfig("data", "data.yml")
 
         loadLangFiles()
