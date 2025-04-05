@@ -16,8 +16,8 @@ S-Economy is a simple and lightweight economy plugin, utilizing Vault as the bac
 - More features in development ...
 
 ## Download
-- **GitHub Releases:** [Releases](https://github.com/Losterixx/S-Economy/releases)
-- **Modrinth:** Coming soon
+- **GitHub Releases:** [Link](https://github.com/Losterixx/S-Economy/releases)
+- **Modrinth:** [Link](https://modrinth.com/plugin/s-economy)
 
 ## Developer API
 A developer API is planned but is currently low priority, as you can just use the Vault API at this time.
