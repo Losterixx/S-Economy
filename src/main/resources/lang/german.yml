@@ -45,3 +45,12 @@ commands:
     check:
       usage: "<gray>Bitte nutze <red>/economy check <Spieler><gray>!"
       success: "<gray>Der Kontostand von <white>%player% <gray>beträgt <yellow>%balance%<gray>!"
+  pay:
+    usage: "<gray>Bitte nutze <red>/pay <Spieler/*> <Betrag><gray>!"
+    noAmount: "<gray>Der angegebene Betrag ist <red>ungültig<gray>!"
+    notEnoughMoney: "<gray>Du hast <red>nicht genügend Geld<gray>!"
+    selfPay: "<gray>Du kannst <red>dir selbst kein Geld geben<gray>!"
+    success:
+      player: "<gray>Du hast <white>%player% <yellow>%balance%<gray> gegeben!"
+      target: "<gray>Du hast <yellow>%balance%<gray> von <white>%player%<gray> erhalten!"
+      all: "<gray>Du hast <white>allen Spielern <yellow>%balance%<gray> gegeben!"

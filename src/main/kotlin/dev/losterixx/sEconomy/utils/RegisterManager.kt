@@ -20,6 +20,7 @@ object RegisterManager {
         registerCommand("sEconomy", SEconomyCommand(), SEconomyCommand(), "seco", "s-eco")
         registerCommand("balance", BalanceCommand(), BalanceCommand(), "bal", "money", "coins")
         registerCommand("economy", EconomyCommand(), EconomyCommand(), "econ", "eco")
+        registerCommand("pay", PayCommand(), PayCommand())
 
         main.logger.info("Registered $commands commands!")
     }

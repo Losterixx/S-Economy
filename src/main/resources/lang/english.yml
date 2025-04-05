@@ -45,3 +45,12 @@ commands:
     check:
       usage: "<gray>Please use <red>/economy check <player><gray>!"
       success: "<gray>The balance of <white>%player% <gray>is <yellow>%balance%<gray>!"
+  pay:
+    usage: "<gray>Please use <red>/pay <player/*> <amount><gray>!"
+    noAmount: "<gray>The given amount is <red>invalid<gray>!"
+    notEnoughMoney: "<gray>You <red>do not have enough money<gray>!"
+    selfPay: "<gray>You <red>cannot pay yourself<gray>!"
+    success:
+      player: "<gray>You have paid <white>%player% <yellow>%balance%<gray>!"
+      target: "<gray>You have received <yellow>%balance%<gray> from <white>%player%<gray>!"
+      all: "<gray>You have paid <white>all players <yellow>%balance%<gray>!"

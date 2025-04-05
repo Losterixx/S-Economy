@@ -41,3 +41,14 @@ economy:
     # 'GERMAN'  -> '1.000,00'
     # 'FRENCH'  -> '1 000,00'
     locale: 'ENGLISH'
+
+# Settings for the commands
+commands:
+  economy:
+    # The amount completions for the /economy command
+    amountCompletions: [10, 50, 100]
+  pay:
+    # The amount completions for the /pay command
+    amountCompletions: [10, 50, 100]
+    # The minimum amount of money to pay
+    minAmount: 5.0

@@ -165,7 +165,8 @@ class EconomyCommand : CommandExecutor, TabCompleter {
         } else if (args.size == 2) {
             completions.addAll(Bukkit.getOnlinePlayers().map { it.name }.filter { it.startsWith(args[1], true) })
         } else if (args.size == 3 && listOf("give", "take", "set").contains(args[0].lowercase())) {
-            completions.addAll(listOf("10", "50", "100").filter { it.startsWith(args[2]) })
+            val amounts = getConfig().getIntList("commands.economy.amountCompletions", listOf(10, 50, 100))
+            completions.addAll(amounts.filter { it.toString().startsWith(args[2]) }.map { it.toString() })
         }
 
         return completions
