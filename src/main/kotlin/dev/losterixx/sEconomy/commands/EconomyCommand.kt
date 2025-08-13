@@ -8,8 +8,6 @@ import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.command.TabCompleter
-import kotlin.collections.get
-import kotlin.text.format
 
 class EconomyCommand : CommandExecutor, TabCompleter {
 
@@ -65,8 +63,7 @@ class EconomyCommand : CommandExecutor, TabCompleter {
 
                 val messageKey = if (isAll) "commands.economy.give.all" else "commands.economy.give.success"
                 sender.sendMessage(mm.deserialize(getPrefix() + getMessages().getString(messageKey)
-                    .replace("%player%", if (isAll) "*" else targets[0].name ?: "?")
-                    .replace("%balance%", eco.format(amount))))
+                    .replace("%player%", if (isAll) "*" else targets[0].name ?: "?")))
             }
 
             "take", "remove" -> {
@@ -90,8 +87,7 @@ class EconomyCommand : CommandExecutor, TabCompleter {
 
                 val messageKey = if (isAll) "commands.economy.take.all" else "commands.economy.take.success"
                 sender.sendMessage(mm.deserialize(getPrefix() + getMessages().getString(messageKey)
-                    .replace("%player%", if (isAll) "*" else targets[0].name ?: "?")
-                    .replace("%balance%", eco.format(amount))))
+                    .replace("%player%", if (isAll) "*" else targets[0].name ?: "?")))
             }
 
             "set" -> {
@@ -115,8 +111,7 @@ class EconomyCommand : CommandExecutor, TabCompleter {
 
                 val messageKey = if (isAll) "commands.economy.set.all" else "commands.economy.set.success"
                 sender.sendMessage(mm.deserialize(getPrefix() + getMessages().getString(messageKey)
-                    .replace("%player%", if (isAll) "*" else targets[0].name ?: "?")
-                    .replace("%balance%", eco.format(amount))))
+                    .replace("%player%", if (isAll) "*" else targets[0].name ?: "?")))
             }
 
             "reset" -> {
@@ -155,8 +150,7 @@ class EconomyCommand : CommandExecutor, TabCompleter {
 
                 val balance = eco.getFormattedBalance(targets[0].uniqueId)
                 sender.sendMessage(mm.deserialize(getPrefix() + getMessages().getString("commands.economy.check.success")
-                    .replace("%player%", targets[0].name ?: "?")
-                    .replace("%balance%", balance)))
+                    .replace("%player%", targets[0].name ?: "?")))
             }
 
             else -> sender.sendMessage(mm.deserialize(getPrefix() + getMessages().getString("commands.economy.usage")))

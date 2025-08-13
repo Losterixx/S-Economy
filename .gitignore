@@ -11,7 +11,12 @@ logs/
 # Gradle
 .gradle
 .gradle/
+<<<<<<< HEAD
 gradle/gradle-wrapper.jar
+=======
+gradle
+gradle/
+>>>>>>> 8a61fc93b223f6c024e1bddcb5d685a0f9e1814a
 build
 build/
 gradlew

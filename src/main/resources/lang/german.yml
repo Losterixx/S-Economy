@@ -45,7 +45,10 @@ commands:
     check:
       usage: "<gray>Bitte nutze <red>/economy check <Spieler><gray>!"
       success: "<gray>Der Kontostand von <white>%player% <gray>beträgt <yellow>%balance%<gray>!"
+<<<<<<< HEAD
       allFailed: "<gray>Du <red>kannst nicht den Kontostand aller Spieler auf einmal überprüfen<gray>! Bitte gib einen Spieler an."
+=======
+>>>>>>> 8a61fc93b223f6c024e1bddcb5d685a0f9e1814a
   pay:
     usage: "<gray>Bitte nutze <red>/pay <Spieler/*> <Betrag><gray>!"
     noAmount: "<gray>Der angegebene Betrag ist <red>ungültig<gray>!"
@@ -54,9 +57,13 @@ commands:
     success:
       player: "<gray>Du hast <white>%player% <yellow>%balance%<gray> gegeben!"
       target: "<gray>Du hast <yellow>%balance%<gray> von <white>%player%<gray> erhalten!"
+<<<<<<< HEAD
       all: "<gray>Du hast <white>allen Spielern <yellow>%balance%<gray> gegeben!"
   balancetop:
     usage: "<gray>Bitte nutze <red>/balancetop<gray>!"
     noPlayers: "<gray>Es gibt <red>keine Spieler<gray> mit einem Kontostand!"
     header: "<gray>Die Top <yellow>10 Spieler <gray>nach Kontostand:"
     entry: "<dark_gray> 🢒 <gold>%index%<gray>. <white>%name% <dark_gray>- <yellow>%balance%<gray>"
+=======
+      all: "<gray>Du hast <white>allen Spielern <yellow>%balance%<gray> gegeben!"
+>>>>>>> 8a61fc93b223f6c024e1bddcb5d685a0f9e1814a

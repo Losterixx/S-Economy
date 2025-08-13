@@ -1,5 +1,9 @@
 name: S-Economy
+<<<<<<< HEAD
 version: '1.2'
+=======
+version: '1.1'
+>>>>>>> 8a61fc93b223f6c024e1bddcb5d685a0f9e1814a
 main: dev.losterixx.sEconomy.Main
 api-version: '1.21'
 authors: [ Losterixx ]
@@ -8,6 +12,7 @@ load: STARTUP
 depend:
   - Vault
 softdepend:
+<<<<<<< HEAD
   - S-Core
 permissions:
   "s-economy.admin":
@@ -43,3 +48,6 @@ permissions:
   "s-economy.command.balancetop":
     description: Allows the player to view the top balance of all players.
     default: op
+=======
+  - S-Core
+>>>>>>> 8a61fc93b223f6c024e1bddcb5d685a0f9e1814a

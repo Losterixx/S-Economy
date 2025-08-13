@@ -40,7 +40,11 @@ economy:
     # 'ENGLISH' -> '1,000.00'
     # 'GERMAN'  -> '1.000,00'
     # 'FRENCH'  -> '1 000,00'
+<<<<<<< HEAD
     locale: 'EN'
+=======
+    locale: 'ENGLISH'
+>>>>>>> 8a61fc93b223f6c024e1bddcb5d685a0f9e1814a
 
 # Settings for the commands
 commands:

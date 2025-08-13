@@ -50,6 +50,18 @@ commands:
       usage: "<gray>Please use <red>/economy check <player><gray>!"
       success: "<gray>The balance of <white>%player% <gray>is <yellow>%balance%<gray>!"
       allFailed: "<gray>You <red>cannot check the balance of all players at once<gray>! Please specify a player."
+    take:
+      usage: "<gray>Please use <red>/economy take <player> <amount><gray>!"
+      success: "<gray>You have taken <white>%player% <yellow>%balance%<gray>!"
+    set:
+      usage: "<gray>Please use <red>/economy set <player> <amount><gray>!"
+      success: "<gray>You have set the balance of <white>%player% <gray>to <yellow>%balance%<gray>!"
+    reset:
+      usage: "<gray>Please use <red>/economy reset <player><gray>!"
+      success: "<gray>You have reset the balance of <white>%player%<gray>!"
+    check:
+      usage: "<gray>Please use <red>/economy check <player><gray>!"
+      success: "<gray>The balance of <white>%player% <gray>is <yellow>%balance%<gray>!"
   pay:
     usage: "<gray>Please use <red>/pay <player/*> <amount><gray>!"
     noAmount: "<gray>The given amount is <red>invalid<gray>!"
