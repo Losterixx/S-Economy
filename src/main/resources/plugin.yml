@@ -1,5 +1,5 @@
 name: S-Economy
-version: '1.1'
+version: '1.2'
 main: dev.losterixx.sEconomy.Main
 api-version: '1.21'
 authors: [ Losterixx ]

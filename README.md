@@ -13,6 +13,7 @@ S-Economy is a simple and lightweight economy plugin, utilizing Vault as the bac
 - Balance command (Aliases: /balance, /bal, /money, /coins)
 - Economy command (Manage player balances)
 - Pay command (Transfer money to other players)
+- Balancetop command (Check top 10 players by balance)
 - More features in development ...
 
 ## Download
