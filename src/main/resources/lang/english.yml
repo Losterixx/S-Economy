@@ -1,0 +1,66 @@
+# This plugin utilizes MiniMessage for messages.
+# For more information, visit https://docs.adventure.kyori.net/minimessage.html
+
+file-version: 1
+
+# General messages
+general:
+  noPlayer: "<gray>You <red>must be a player<gray> to execute this command!"
+  noPerms: "<gray>You <red>do not have permission<gray> to execute this command!"
+  playerNotFound: "<gray>The given player <red>could not be found<gray>!"
+
+# Other messages
+other:
+  updateChecker: "<gray>An <yellow>update <gray>is available! You are using version <red>v%current-version%<gray>, the latest version is <green>%latest-version%<gray>!"
+
+# Command messages
+commands:
+  # Messages for the /s-economy command (main plugin command)
+  s-economy:
+    usage: "<gray>Please use <red>/s-economy <about/reload><gray>!"
+    about: "<gray>S-Economy v%version% <dark_gray>- <gray>%author%"
+    reload:
+      reloading: "<yellow>Reloading <gray>S-Economy..."
+      reloaded: "<green>Successfully reloaded <gray>S-Economy! <dark_gray>(%time%ms)"
+      error: "<gray>An <red>error occurred <gray>while reloading S-Economy! Check the console for details."
+  balance:
+    usage: "<gray>Please use <red>/balance <player><gray>!"
+    self: "<gray>Your balance is <yellow>%balance%<gray>!"
+    other: "<gray>The balance of <white>%player% <gray>is <yellow>%balance%<gray>!"
+  economy:
+    usage: "<gray>Please use <red>/economy <give/take/set/reset/check> <player> <?amount><gray>!"
+    noAmount: "<gray>The given amount is <red>invalid<gray>!"
+    give:
+      usage: "<gray>Please use <red>/economy give <player> <amount><gray>!"
+      success: "<gray>You have given <white>%player% <yellow>%balance%<gray>!"
+      all: "<gray>You have given <white>all players <yellow>%balance%<gray>!"
+    take:
+      usage: "<gray>Please use <red>/economy take <player> <amount><gray>!"
+      success: "<gray>You have taken <white>%player% <yellow>%balance%<gray>!"
+      all: "<gray>You have taken <white>from all players <yellow>%balance%<gray>!"
+    set:
+      usage: "<gray>Please use <red>/economy set <player> <amount><gray>!"
+      success: "<gray>You have set the balance of <white>%player% <gray>to <yellow>%balance%<gray>!"
+      all: "<gray>You have set the balance of <white>all players <gray>to <yellow>%balance%<gray>!"
+    reset:
+      usage: "<gray>Please use <red>/economy reset <player><gray>!"
+      success: "<gray>You have reset the balance of <white>%player%<gray>!"
+      all: "<gray>You have reset the balance of <white>all players<gray>!"
+    check:
+      usage: "<gray>Please use <red>/economy check <player><gray>!"
+      success: "<gray>The balance of <white>%player% <gray>is <yellow>%balance%<gray>!"
+      allFailed: "<gray>You <red>cannot check the balance of all players at once<gray>! Please specify a player."
+  pay:
+    usage: "<gray>Please use <red>/pay <player/*> <amount><gray>!"
+    noAmount: "<gray>The given amount is <red>invalid<gray>!"
+    notEnoughMoney: "<gray>You <red>do not have enough money<gray>!"
+    selfPay: "<gray>You <red>cannot pay yourself<gray>!"
+    success:
+      player: "<gray>You have paid <white>%player% <yellow>%balance%<gray>!"
+      target: "<gray>You have received <yellow>%balance%<gray> from <white>%player%<gray>!"
+      all: "<gray>You have paid <white>all players <yellow>%balance%<gray>!"
+  balancetop:
+    usage: "<gray>Please use <red>/balancetop<gray>!"
+    header: "<gray>Top <yellow>10 Players <gray>by Balance:"
+    noPlayers: "<gray>There are <red>no players<gray> with a balance!"
+    entry: "<dark_gray> 🢒 <gold>%index%<gray>. <white>%name% <dark_gray>- <yellow>%balance%<gray>"

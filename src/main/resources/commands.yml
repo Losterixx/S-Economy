@@ -1,0 +1,36 @@
+# This plugin utilizes MiniMessage for messages.
+# For more information, visit https://docs.adventure.kyori.net/minimessage.html
+
+file-version: 1
+
+# Settings for /balance
+balance:
+  # Should the command be enabled?
+  enabled: true
+  # What aliases should be used for this command?
+  aliases:
+    - bal
+    - money
+    - coins
+
+# Settings for /economy
+economy:
+  enabled: true
+  aliases:
+    - econ
+    - eco
+
+# Settings for /pay
+pay:
+  enabled: true
+  # '[]' means no aliases
+  aliases: []
+
+# Settings for /balancetop
+balancetop:
+  enabled: true
+  # '[]' means no aliases
+  aliases:
+    - baltop
+    - moneytop
+    - coinstop
