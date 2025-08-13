@@ -63,7 +63,8 @@ class EconomyCommand : CommandExecutor, TabCompleter {
 
                 val messageKey = if (isAll) "commands.economy.give.all" else "commands.economy.give.success"
                 sender.sendMessage(mm.deserialize(getPrefix() + getMessages().getString(messageKey)
-                    .replace("%player%", if (isAll) "*" else targets[0].name ?: "?")))
+                    .replace("%player%", if (isAll) "*" else targets[0].name ?: "?")
+                    .replace("%balance%", eco.format(amount))))
             }
 
             "take", "remove" -> {
@@ -87,7 +88,8 @@ class EconomyCommand : CommandExecutor, TabCompleter {
 
                 val messageKey = if (isAll) "commands.economy.take.all" else "commands.economy.take.success"
                 sender.sendMessage(mm.deserialize(getPrefix() + getMessages().getString(messageKey)
-                    .replace("%player%", if (isAll) "*" else targets[0].name ?: "?")))
+                    .replace("%player%", if (isAll) "*" else targets[0].name ?: "?")
+                    .replace("%balance%", eco.format(amount))))
             }
 
             "set" -> {
@@ -111,7 +113,8 @@ class EconomyCommand : CommandExecutor, TabCompleter {
 
                 val messageKey = if (isAll) "commands.economy.set.all" else "commands.economy.set.success"
                 sender.sendMessage(mm.deserialize(getPrefix() + getMessages().getString(messageKey)
-                    .replace("%player%", if (isAll) "*" else targets[0].name ?: "?")))
+                    .replace("%player%", if (isAll) "*" else targets[0].name ?: "?")
+                    .replace("%balance%", eco.format(amount))))
             }
 
             "reset" -> {
@@ -150,7 +153,8 @@ class EconomyCommand : CommandExecutor, TabCompleter {
 
                 val balance = eco.getFormattedBalance(targets[0].uniqueId)
                 sender.sendMessage(mm.deserialize(getPrefix() + getMessages().getString("commands.economy.check.success")
-                    .replace("%player%", targets[0].name ?: "?")))
+                    .replace("%player%", targets[0].name ?: "?")
+                    .replace("%balance%", balance)))
             }
 
             else -> sender.sendMessage(mm.deserialize(getPrefix() + getMessages().getString("commands.economy.usage")))
