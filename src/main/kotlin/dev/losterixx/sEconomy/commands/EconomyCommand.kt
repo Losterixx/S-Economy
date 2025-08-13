@@ -177,7 +177,7 @@ class EconomyCommand : CommandExecutor, TabCompleter {
                 if (sender.hasPermission("sEconomy.command.eco.$it") && it.startsWith(args[0].lowercase())) completions.add(it)
             }
         } else if (args.size == 2) {
-            completions.addAll(Bukkit.getOnlinePlayers().map { it.name }.filter { it.startsWith(args[1], true) })
+            completions.addAll(listOf("*") + Bukkit.getOnlinePlayers().map { it.name }.filter { it.startsWith(args[1], true) })
         } else if (args.size == 3 && listOf("give", "take", "set").contains(args[0].lowercase())) {
             val amounts = getConfig().getIntList("commands.economy.amountCompletions", listOf(10, 50, 100))
             completions.addAll(amounts.filter { it.toString().startsWith(args[2]) }.map { it.toString() })

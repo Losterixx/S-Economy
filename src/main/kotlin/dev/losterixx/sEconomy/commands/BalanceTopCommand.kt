@@ -41,7 +41,7 @@ class BalanceTopCommand : CommandExecutor {
             val name = Bukkit.getOfflinePlayer(uuid).name ?: "???"
             val formattedBalance = eco.format(balance)
             sender.sendMessage(mm.deserialize(
-                getMessages().getString("commands.balancetop.line")
+                getMessages().getString("commands.balancetop.entry")
                     .replace("%index%", (index + 1).toString())
                     .replace("%name%", name)
                     .replace("%balance%", formattedBalance)
