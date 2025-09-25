@@ -9,6 +9,8 @@ import dev.losterixx.sEconomy.utils.RegisterManager
 import dev.losterixx.sEconomy.utils.UpdateChecker
 import dev.losterixx.sEconomy.utils.bStats.Metrics
 import net.kyori.adventure.text.minimessage.MiniMessage
+import net.luckperms.api.LuckPerms
+import net.luckperms.api.LuckPermsProvider
 import net.milkbowl.vault.economy.Economy
 import org.bukkit.Bukkit
 import org.bukkit.plugin.ServicePriority
@@ -23,6 +25,8 @@ class Main : JavaPlugin() {
 
         const val DEFAULT_PREFIX = "<#ECC868><b>S-Economy</b> <dark_gray>⚡ <gray>"
         val miniMessage = MiniMessage.miniMessage()
+        var luckperms: LuckPerms? = null
+            private set
     }
 
     lateinit var economyManager: EconomyManager
@@ -54,6 +58,13 @@ class Main : JavaPlugin() {
         } else {
             logger.warning("Vault not found! This plugin is required for the economy system to work.")
             Bukkit.getPluginManager().disablePlugin(this)
+            return
+        }
+        if (server.pluginManager.getPlugin("LuckPerms") != null ) {
+            luckperms = LuckPermsProvider.get()
+            logger.info("Hooked into LuckPerms v${luckperms?.pluginMetadata?.version}!")
+        } else {
+            logger.warning("LuckPerms not found! The exempt permission for the /balancetop command will not work.")
             return
         }
 

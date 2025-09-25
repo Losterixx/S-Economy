@@ -1,5 +1,5 @@
 name: S-Economy
-version: '1.2'
+version: '1.2.1'
 main: dev.losterixx.sEconomy.Main
 api-version: '1.21'
 authors: [ Losterixx ]
@@ -9,6 +9,7 @@ depend:
   - Vault
 softdepend:
   - S-Core
+  - LuckPerms
 permissions:
   "s-economy.admin":
     description: Allows the player to use the main command of S-Economy.
@@ -42,4 +43,7 @@ permissions:
     default: op
   "s-economy.command.balancetop":
     description: Allows the player to view the top balance of all players.
+    default: op
+  "s-economy.exempt.balancetop":
+    description: Exempts the player from appearing in the balance top.
     default: op

@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "dev.losterixx"
-version = "1.2"
+version = "1.2.1"
 
 repositories {
     mavenCentral()
@@ -31,6 +31,7 @@ dependencies {
     compileOnly("com.github.MilkBowl:VaultAPI:1.7") {
         exclude(group = "org.bukkit", module = "bukkit")
     }
+    compileOnly("net.luckperms:api:5.3")
 }
 
 tasks {

@@ -28,7 +28,7 @@ class BalanceTopCommand : CommandExecutor {
             return false
         }
 
-        val topAccounts = eco.getTopAccounts(10)
+        val topAccounts = eco.getTopAccounts(10, filterExemptPermission = true)
         if (topAccounts.isEmpty()) {
             sender.sendMessage(mm.deserialize(getPrefix() + getMessages().getString("commands.balancetop.noPlayers")))
             return false

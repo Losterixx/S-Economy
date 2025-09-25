@@ -1,6 +1,9 @@
 package dev.losterixx.sEconomy.economy
 
+import dev.losterixx.sEconomy.Main
 import dev.losterixx.sEconomy.utils.ConfigManager
+import net.luckperms.api.model.user.User
+import org.bukkit.Bukkit
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
 import java.util.*
@@ -9,6 +12,13 @@ class EconomyManager {
 
     private fun getConfig() = ConfigManager.getConfig("config")
     private fun getData() = ConfigManager.getConfig("data")
+    private val luckperms get() = Main.luckperms
+
+    private fun hasExemptPermission(uuid: UUID): Boolean {
+        val lp = luckperms ?: return false
+        val user: User = lp.userManager.loadUser(uuid).join() ?: return false
+        return user.cachedData.permissionData.checkPermission("s-economy.exempt.balancetop").asBoolean()
+    }
 
     fun getBalance(uuid: UUID?): Double {
         return getData().getDouble("$uuid.balance", -1.0)
@@ -18,12 +28,13 @@ class EconomyManager {
         return format(getData().getDouble("$uuid.balance", -1.0))
     }
 
-    fun getTopAccounts(limit: Int): List<Pair<UUID, Double>> {
+    fun getTopAccounts(limit: Int, filterExemptPermission: Boolean = true): List<Pair<UUID, Double>> {
         val accounts = mutableListOf<Pair<UUID, Double>>()
 
         for (key in getData().getRoutesAsStrings(false)) {
             try {
                 val uuid = UUID.fromString(key)
+                if (filterExemptPermission && hasExemptPermission(uuid)) continue
                 val balance = getBalance(uuid)
                 if (balance >= 0) {
                     accounts.add(uuid to balance)
