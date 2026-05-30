@@ -33,11 +33,26 @@ class EconomyCommand : CommandExecutor, TabCompleter {
         }
 
         val isAll = args[1] == "*"
-        val targets: List<OfflinePlayer> = if (isAll) Bukkit.getOnlinePlayers().map { it as OfflinePlayer } else listOf(Bukkit.getOfflinePlayer(args[1]))
+        val targets: List<OfflinePlayer> = if (isAll) {
+            Bukkit.getOnlinePlayers().map { it as OfflinePlayer }
+        } else {
+            val onlinePlayer = Bukkit.getPlayer(args[1])
+            if (onlinePlayer != null) listOf(onlinePlayer as OfflinePlayer)
+            else listOf(Bukkit.getOfflinePlayer(args[1]))
+        }
 
-        if (!isAll && (!targets[0].hasPlayedBefore() || !eco.hasAccount(targets[0].uniqueId))) {
-            sender.sendMessage(mm.deserialize(getPrefix() + getMessages().getString("general.playerNotFound")))
-            return false
+        if (!isAll) {
+            val target = targets[0]
+
+            val isOnline = Bukkit.getPlayer(args[1]) != null
+            if (!isOnline && !target.hasPlayedBefore()) {
+                sender.sendMessage(mm.deserialize(getPrefix() + getMessages().getString("general.playerNotFound")))
+                return false
+            }
+
+            if (!eco.hasAccount(target.uniqueId)) {
+                eco.resetBalance(target.uniqueId)
+            }
         }
 
         when (args[0].lowercase()) {

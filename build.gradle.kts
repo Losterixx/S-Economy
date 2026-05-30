@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "dev.losterixx"
-version = "1.2.1"
+version = "1.2.3"
 
 repositories {
     mavenCentral()
