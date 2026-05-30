@@ -65,7 +65,6 @@ class Main : JavaPlugin() {
             logger.info("Hooked into LuckPerms v${luckperms?.pluginMetadata?.version}!")
         } else {
             logger.warning("LuckPerms not found! The exempt permission for the /balancetop command will not work.")
-            return
         }
 
         //-> Register
